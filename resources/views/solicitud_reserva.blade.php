@@ -14,7 +14,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{$pn -> nombre_parque }}</h5>
                 <p class="card-text">Ubicación: {{$pn -> ubicacion_parque }}</p>
-            <a href='/solicitud_reserva/{{$pn -> id_parque}}' class="btn btn-primary">Solicitar reservación</a>
+            <a href='/solicitud-reserva/{{$pn -> id_parque}}' class="btn btn-primary">Solicitar reservación</a>
             </div>
         </div>
     
