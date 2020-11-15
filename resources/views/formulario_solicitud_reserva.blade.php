@@ -45,6 +45,18 @@
                                 @endforeach
                             </select>
                           </div>
+                          <div class="form-group">
+                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Cantidad de acompañantes">
+                        </div>
+                        <div class="form-group">
+                            <label for="inicio_reserva">Inicio de la reserva</label>
+                            <input type="datetime-local" class="form-control" id="inicio_reserva" >
+                        </div>
+                        <div class="form-group">
+                            <label for="fin_reserva">Fin de la reserva</label>
+                            <input type="datetime-local" class="form-control" id="fin _reserva" >
+                        </div>
+                        <button type="submit" class="btn btn-primary">Solicitar</button>
                       </form>
                 </div>
             </div>
