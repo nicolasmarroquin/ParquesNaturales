@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/solicitud-reserva', 'SolicitudReservaController@index')->name('solicitud-reserva');
 
 Route::get('/solicitud-reserva/{id_parque}', 'SolicitudReservaController@solicitud')->name('solicitud-reserva/{id_parque}');
+
+Route::post('solicitar', 'SolicitudReservaController@store');

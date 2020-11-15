@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ParqueNatural;
 use App\ServicioHospedaje;
+use App\Solicitante;
 
 class SolicitudReservaController extends Controller
 {
@@ -36,5 +37,26 @@ class SolicitudReservaController extends Controller
         $servicios = ServicioHospedaje::where($matchThese)->get();
        
         return view('formulario_solicitud_reserva',['servicios' => $servicios ]);
+    }
+
+    /**
+     * Afectua solicitud de reserva
+     *
+     */
+    public function store(Request $request)
+    {
+        $solicitante =  array(
+            'id_solicitante' => $request->identificacion,
+            'nombre solicitante'=> $request->nombres,
+            'email_solicitante'=> $request->email,
+            'fecha_nacimiento_solicitante'=>$request->fecha_nacimiento,
+            'genero_solicitante'=>$request->genero,
+            'telefono_solicitante'=>$request->telefono
+        ); 
+
+        Solicitante::create($solicitante);
+       
+       return response()->json(['success' => 'Solicitud realizadaa']);
+     
     }
 }
