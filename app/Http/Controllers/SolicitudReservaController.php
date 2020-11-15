@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\ParqueNatural;
 use App\ServicioHospedaje;
 use App\Solicitante;
+use App\SolicitudReserva;
 
 class SolicitudReservaController extends Controller
 {
@@ -55,6 +56,18 @@ class SolicitudReservaController extends Controller
         ); 
 
         Solicitante::create($solicitante);
+
+        $solicitud = array(
+            'SERVICIO_id_servicio' => $request->servicio,
+            'SOLICITANTE_id_solicitante' => $request->identificacion,
+            'numero_acompañantes' => $request->cantidad_acompanantes,
+            'inicio_reserva'=>$request->inicio_reserva,
+            'fin_reserva'=>$request->fin_reserva,
+            'ESTADO_id_estado'=>1
+
+        );
+
+        SolicitudReserva::create($solicitud);
        
        return response()->json(['success' => 'Solicitud realizadaa']);
      

@@ -47,7 +47,7 @@
                             </select>
                           </div>
                           <div class="form-group">
-                            <input type="number" class="form-control" id="cantidad_acompanantes" placeholder="Cantidad de acompañantes">
+                            <input type="number" class="form-control" id="cantidad_acompanantes" name="cantidad_acompanantes" placeholder="Cantidad de acompañantes">
                         </div>
                         <div class="form-group">
                             <label for="inicio_reserva">Inicio de la reserva</label>
