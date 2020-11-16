@@ -69,7 +69,7 @@ class SolicitudReservaController extends Controller
 
         SolicitudReserva::create($solicitud);
        
-       return response()->json(['success' => 'Solicitud realizadaa']);
+       return response()->json(['success' => 'Solicitud realizada']);
      
     }
 }
