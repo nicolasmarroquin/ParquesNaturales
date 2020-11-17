@@ -26,3 +26,5 @@ Route::get('/solicitud-reserva', 'SolicitudReservaController@index')->name('soli
 Route::get('/solicitud-reserva/{id_parque}', 'SolicitudReservaController@solicitud')->name('solicitud-reserva/{id_parque}');
 
 Route::post('solicitar', 'SolicitudReservaController@store');
+
+Route::get('/solicitud/{id_solicitud}', 'SolicitudReservaController@consultar')->name('/solicitud/{id_solicitud}');

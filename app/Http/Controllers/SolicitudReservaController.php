@@ -7,6 +7,7 @@ use App\ParqueNatural;
 use App\ServicioHospedaje;
 use App\Solicitante;
 use App\SolicitudReserva;
+use App\Estado;
 
 class SolicitudReservaController extends Controller
 {
@@ -71,5 +72,20 @@ class SolicitudReservaController extends Controller
        
        return response()->json(['success' => 'Solicitud realizada']);
      
+    }
+
+    /**
+     * Muestra la página con formulario para solicitud
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function consultar($id_solicitud)
+    {
+        $matchThese = ['id_solicitud' => $id_solicitud]; 
+        $solicitud = SolicitudReserva::addSelect(['estado' => Estado::select('nombre_estado')
+        ->whereColumn('ESTADO_id_estado', 'id_estado')
+        ])->get();
+       
+        return view('estado_solicitud',['solicitud' => $solicitud[0] ]);
     }
 }
