@@ -85,7 +85,28 @@ class SolicitudReservaController extends Controller
         $solicitud = SolicitudReserva::addSelect(['estado' => Estado::select('nombre_estado')
         ->whereColumn('ESTADO_id_estado', 'id_estado')
         ])->get();
+
+       // return response()->json(['error' => 'La solicitud ingresada no existe!']);
        
         return view('estado_solicitud',['solicitud' => $solicitud[0] ]);
+    }
+
+    /**
+     * Muestra la página con formulario para solicitud
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function buscar($id_solicitud)
+    {
+        $matchThese = ['id_solicitud' => $id_solicitud]; 
+        $solicitud = SolicitudReserva::where($matchThese)->addSelect(['estado' => Estado::select('nombre_estado')
+        ->whereColumn('ESTADO_id_estado', 'id_estado')
+        ])->get();
+
+        if(sizeof($solicitud)==0){
+            return response()->json(['errors' => ['La solicitud ingresada no existe!']]);
+        }else{
+            return response()->json(['success' => 'La solicitud ingresada existe!']);
+        }
     }
 }

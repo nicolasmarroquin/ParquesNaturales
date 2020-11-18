@@ -84,7 +84,7 @@
 
                 <div class="links">
                     <a href="/solicitud-reserva">Realizar solicitud</a>
-                    <a href="#" onclick="changeText(this)">Validar solicitud</a>
+                    <a href="" id="validar">Validar solicitud</a>
                 </div>
             </div>
         </div>
@@ -100,15 +100,16 @@
           </button>
         </div>
         <div class="modal-body">
+            <span id="respuesta"></span>
             <form class="form-inline">
                 <i class="fas fa-search" aria-hidden="true"></i>
-                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Solicitud"
+                <input class="form-control form-control-sm ml-3 w-75" id="solicitud" type="text" placeholder="Solicitud"
                   aria-label="Search">
               </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Buscar</button>
+          <button type="button" id="buscar" class="btn btn-primary">Buscar</button>
         </div>
       </div>
     </div>
@@ -116,10 +117,71 @@
   <script src="https://kit.fontawesome.com/a4975ac87a.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>        
         <script>
-            function changeText(id) {
-                $("#busqueda").modal("show");
-          }
+            
+
+$(document).ready(function(){
+
+    $('#validar').click(function(){
+        event.preventDefault();
+        $('#respuesta').html('');
+        $("#busqueda").modal("show");
+      
+    });
+
+    $('#buscar').click(function(){
+
+
+        event.preventDefault();
+        var solicitud = $('#solicitud').val();
+        var action_url = '/buscar-solicitud/'+solicitud;
+
+
+
+$.ajax({
+url: action_url,
+method:"GET",
+dataType:"json",
+success:function(data)
+{
+var html = '';
+if(data.errors)
+{
+ html = '<div class="alert alert-danger">';
+ for(var count = 0; count < data.errors.length; count++)
+ {
+  html += '<p>' + data.errors[count] + '</p>';
+ }
+ html += '</div>';
+ $('#respuesta').html(html);
+}
+if(data.success)
+{
+    $(location).attr('href',"/solicitud/"+solicitud);
+}
+
+}
+});
+      
+  });
+
+
+});
+
+            
+
+          
+
+            
+
+                
+          
+
+          
+
+
         </script>
     </body>
 </html>
