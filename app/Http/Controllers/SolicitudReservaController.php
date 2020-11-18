@@ -8,6 +8,7 @@ use App\ServicioHospedaje;
 use App\Solicitante;
 use App\SolicitudReserva;
 use App\Estado;
+use Illuminate\Database\QueryException;
 
 class SolicitudReservaController extends Controller
 {
@@ -48,15 +49,20 @@ class SolicitudReservaController extends Controller
     public function store(Request $request)
     {
         $solicitante =  array(
-            'id_solicitante' => $request->identificacion,
             'nombre solicitante'=> $request->nombres,
             'email_solicitante'=> $request->email,
             'fecha_nacimiento_solicitante'=>$request->fecha_nacimiento,
             'genero_solicitante'=>$request->genero,
             'telefono_solicitante'=>$request->telefono
         ); 
+       
+       
+            Solicitante::updateOrCreate(['id_solicitante'=>$request->identificacion],
+            $solicitante);
+        
+        
 
-        Solicitante::create($solicitante);
+        
 
         $solicitud = array(
             'SERVICIO_id_servicio' => $request->servicio,
@@ -68,9 +74,9 @@ class SolicitudReservaController extends Controller
 
         );
 
-        SolicitudReserva::create($solicitud);
+        $solicitud=SolicitudReserva::create($solicitud);
        
-       return response()->json(['success' => 'Solicitud realizada']);
+       return response()->json(['success' => 'Solicitud realizada con el ID: '.$solicitud->id]);
      
     }
 
@@ -82,7 +88,7 @@ class SolicitudReservaController extends Controller
     public function consultar($id_solicitud)
     {
         $matchThese = ['id_solicitud' => $id_solicitud]; 
-        $solicitud = SolicitudReserva::addSelect(['estado' => Estado::select('nombre_estado')
+        $solicitud = SolicitudReserva::where($matchThese)->addSelect(['estado' => Estado::select('nombre_estado')
         ->whereColumn('ESTADO_id_estado', 'id_estado')
         ])->get();
 
