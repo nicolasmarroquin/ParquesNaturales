@@ -39,7 +39,7 @@
                 </a>
                 @endcan
                 @can('registrar visitantes')
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/registrar-visita') }}">
                     Registro de visitantes
                 </a>
                 @endcan

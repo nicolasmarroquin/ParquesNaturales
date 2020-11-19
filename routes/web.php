@@ -30,3 +30,6 @@ Route::post('solicitar', 'SolicitudReservaController@store');
 Route::get('/solicitud/{id_solicitud}', 'SolicitudReservaController@consultar')->name('/solicitud/{id_solicitud}');
 
 Route::get('/buscar-solicitud/{id_solicitud}', 'SolicitudReservaController@buscar')->name('/buscar-solicitud/{id_solicitud}');
+
+Route::get('/registrar-visita', 'VisitanteController@index')->name('/registrar-visita');
+
