@@ -7,6 +7,7 @@ use App\Visitante;
 
 class VisitanteController extends Controller
 {
+    //PRUEBA_COMENTARIO
     //
     /**
      * Muestra la página para solicitud de reservas
