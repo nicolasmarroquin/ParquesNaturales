@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d1e0dc-10c4-425d-8060-91657b9199da" name="Default Changelist" comment="" />
+    <list default="true" id="25d1e0dc-10c4-425d-8060-91657b9199da" name="Default Changelist" comment="Se modifica git ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +34,15 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
@@ -124,6 +157,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
@@ -134,6 +168,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="file.status.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -158,12 +193,25 @@
       <updated>1605669430549</updated>
       <workItem from="1605669431598" duration="4274000" />
       <workItem from="1605742235013" duration="2087000" />
-      <workItem from="1605757074646" duration="6057000" />
+      <workItem from="1605757074646" duration="7675000" />
+      <workItem from="1605766716323" duration="1458000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="243" key="#Composer" timestamp="1605669455907">
@@ -174,9 +222,53 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1756" y="6" key="#PHP/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605673536148" />
+    <state x="1641" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605765982590">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1641" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605765982590" />
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605759734316">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605759734316" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1605766099421">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766099421" />
+    <state x="1829" y="118" key="FileChooserDialogImpl" timestamp="1605766490148">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766490148" />
+    <state x="1873" y="283" key="Github.CreateGistDialog" timestamp="1605766506484">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1873" y="283" key="Github.CreateGistDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766506484" />
+    <state width="905" height="179" key="GridCell.Tab.0.bottom" timestamp="1605766597153">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766597153" />
+    <state width="905" height="179" key="GridCell.Tab.0.center" timestamp="1605766597153">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766597153" />
+    <state width="905" height="179" key="GridCell.Tab.0.left" timestamp="1605766597153">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766597153" />
+    <state width="905" height="179" key="GridCell.Tab.0.right" timestamp="1605766597153">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766597153" />
+    <state x="1550" y="8" key="SettingsEditor" timestamp="1605766583390">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766583390" />
+    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605768148370">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605768148370" />
+    <state x="1812" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605766861339">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1812" y="265" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766861339" />
   </component>
 </project>
