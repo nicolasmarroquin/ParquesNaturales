@@ -29,7 +29,7 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 @can('gestionar CARs')
-                <a class="navbar-brand" href="{{ url('/gestion-car') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     Gestión de CARs
                 </a>
                 @endcan
@@ -39,7 +39,7 @@
                 </a>
                 @endcan
                 @can('registrar visitantes')
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/registrar-visita') }}">
                     Registro de visitantes
                 </a>
                 @endcan
