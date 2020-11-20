@@ -32,3 +32,5 @@ Route::get('/solicitud/{id_solicitud}', 'SolicitudReservaController@consultar')-
 Route::get('/buscar-solicitud/{id_solicitud}', 'SolicitudReservaController@buscar')->name('/buscar-solicitud/{id_solicitud}');
 
 Route::get('/gestion-car', 'CARController@index')->name('/gestion-car');
+
+Route::get('/gestion-car/nuevo-registro', 'CARController@crearRegistro')->name('/gestion-car/nuevo-registro');

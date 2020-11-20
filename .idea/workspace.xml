@@ -19,13 +19,21 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d1e0dc-10c4-425d-8060-91657b9199da" name="Default Changelist" comment="Se modifica git ignore" />
+    <list default="true" id="25d1e0dc-10c4-425d-8060-91657b9199da" name="Default Changelist" comment="Se modifica git ignore">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CARController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CARController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/gestion-car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/gestion-car.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,6 +203,8 @@
       <workItem from="1605742235013" duration="2087000" />
       <workItem from="1605757074646" duration="7675000" />
       <workItem from="1605766716323" duration="1458000" />
+      <workItem from="1605769779777" duration="1503000" />
+      <workItem from="1605832693326" duration="12265000" />
     </task>
     <servers />
   </component>
@@ -206,7 +216,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -258,14 +280,26 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="905" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766597153" />
+    <state x="1399" y="16" width="1300" height="689" key="MergeDialog" timestamp="1605770505558">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1399" y="16" width="1300" height="689" key="MergeDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605770505558" />
+    <state x="1687" y="125" key="MultipleFileMergeDialog" timestamp="1605770505582">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1687" y="125" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605770505582" />
     <state x="1550" y="8" key="SettingsEditor" timestamp="1605766583390">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766583390" />
-    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605769533120">
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1605771140057">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605769533120" />
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605771140057" />
+    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605771275206">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605771275206" />
     <state x="1812" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605766861339">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>

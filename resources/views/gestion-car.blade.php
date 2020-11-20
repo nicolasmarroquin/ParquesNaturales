@@ -5,10 +5,39 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">Gestion CARs</div>
-
+                <div class="card-header d-flex">
+                    Gestión de Corporaciones Autonomas Regionales
+                    <a href="/gestion-car/nuevo-registro" class="btn btn-primary btn-sm ml-auto">Registrar CAR</a>
+                </div>
                 <div class="card-body">
+                    <table class="table table-borderless">
+                        <thead>
+                        <tr>
+                            <th scope="col">NIT</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Ubicación</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Decreto No.</th>
+                            <th scope="col">Opciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">113345678</th>
+                            <td>Corpoamazonia</td>
+                            <td>Leticia,Amazonas</td>
+                            <td>Activo</td>
+                            <td>12334</td>
+                            <td>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-primary">Editar</button>
+                                    <button type="button" class="btn btn-danger" >Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
 
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
