@@ -33,3 +33,4 @@ Route::get('/buscar-solicitud/{id_solicitud}', 'SolicitudReservaController@busca
 
 Route::get('/registrar-visita', 'VisitanteController@index')->name('/registrar-visita');
 
+Route::post('RegistrarVisitante', 'VisitanteController@guardar')-> name('/RegistrarVisitante');

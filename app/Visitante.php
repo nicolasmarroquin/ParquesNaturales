@@ -8,5 +8,6 @@ class Visitante extends Model
 {
     public $timestamps = false;
     protected $table = 'visitante';
+    protected $primaryKey = 'id_visitante';
     protected $fillable = ['fecha_nacimiento_visitante','genero_visitante'];
 }
