@@ -33,8 +33,5 @@ Route::get('/buscar-solicitud/{id_solicitud}', 'SolicitudReservaController@busca
 
 Route::get('/gestion-car', 'CARController@index')->name('/gestion-car');
 
-<<<<<<< HEAD
 Route::post('RegistrarVisitante', 'VisitanteController@guardar')-> name('/RegistrarVisitante');
-=======
 Route::get('/gestion-car/nuevo-registro', 'CARController@crearRegistro')->name('/gestion-car/nuevo-registro');
->>>>>>> d274c0071e713e0261b6c7ccf6139a56b1799b32
