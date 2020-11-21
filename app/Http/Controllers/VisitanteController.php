@@ -39,7 +39,7 @@ class VisitanteController extends Controller
         'VISITANTE_id_visitante'=>$visitante->id_visitante,
         'fecha_ingreso'=>$fecha_hoy
     );
-    IngresoVisitantes::create($registro_visitante);
+    IngresoVisitantes::create($registro_Ingresovisitante);
 
     
     return response()->json(['success' => 'Se ha registrado el visitante']);

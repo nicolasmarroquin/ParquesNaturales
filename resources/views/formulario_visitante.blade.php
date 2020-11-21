@@ -11,7 +11,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="inicio_reserva">Fecah de nacimiento</label>
-                                <input type="datetime-local" class="form-control" id="Fecha_naciemiento"
+                                <input type="date" class="form-control" id="Fecha_naciemiento"
                                     name="Fecha_naciemiento">
                             </div>
                             <div class="form-group">
@@ -80,7 +80,7 @@
                         if (data.success) {
                             html = '<div class="alert alert-success">' + data.success +
                                 '</div>';
-                            $('#solicitud_reserva')[0].reset();
+                            $('#registro_visitante')[0].reset();
                         }
                         $('#respuesta').html(html);
                         $("#respuesta_solicitud").modal("show");
