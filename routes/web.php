@@ -33,6 +33,10 @@ Route::get('/buscar-solicitud/{id_solicitud}', 'SolicitudReservaController@busca
 
 Route::get('/gestion-car', 'CARController@index')->name('/gestion-car');
 
+Route::get('/registrar-visita', 'VisitanteController@index')->name('/registrar-visita');
+
+Route::post('RegistrarVisitante', 'VisitanteController@guardar')-> name('/RegistrarVisitante');
+
 Route::get('/gestion-car/nuevo-registro', 'CARController@crearRegistro')->name('/gestion-car/nuevo-registro');
 
 Route::post('/gestion-car/post-nuevo-registro', 'CARController@crearCAR')->name('/gestion-car/post-nuevo-registro');

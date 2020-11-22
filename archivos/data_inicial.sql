@@ -189,15 +189,6 @@ INSERT INTO `personal_parque_natural` VALUES (1,2,900000,2,45465465),(1,1,900000
 UNLOCK TABLES;
 
 --
--- Dumping data for table `rol`
---
-
-LOCK TABLES `rol` WRITE;
-/*!40000 ALTER TABLE `rol` DISABLE KEYS */;
-/*!40000 ALTER TABLE `rol` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Dumping data for table `role_has_permissions`
 --
 
@@ -315,4 +306,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-19 22:23:51
+-- Dump completed on 2020-11-20 23:34:53

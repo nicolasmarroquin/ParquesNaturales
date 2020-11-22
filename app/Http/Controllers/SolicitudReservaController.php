@@ -8,10 +8,21 @@ use App\ServicioHospedaje;
 use App\Solicitante;
 use App\SolicitudReserva;
 use App\Estado;
+use Auth;
 use Illuminate\Database\QueryException;
 
 class SolicitudReservaController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Muestra la página para solicitud de reservas
      *
