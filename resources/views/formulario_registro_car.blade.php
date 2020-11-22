@@ -7,18 +7,19 @@
             <div class="card">
                 <div class="card-header">Registrar nueva CAR</div>
                 <div class="card-body">
-                    <form>
+                    <form method="post" id="formularioRegistroCar">
+                        @csrf
                         <div class="form-group">
                             <label for="nit">NIT</label>
-                            <input type="number" class="form-control" id="nit">
+                            <input type="number" class="form-control" id="nit" name="nit">
                             <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="nombre">
+                            <input type="text" class="form-control" id="nombre" name="nombre">
                             <label for="ubicacion">Ubicación</label>
-                            <input type="text" class="form-control" id="ubicacion">
+                            <input type="text" class="form-control" id="ubicacion" name="ubicacion">
                             <label for="decreto">Decreto No.</label>
-                            <input type="text" class="form-control" id="decreto">
+                            <input type="text" class="form-control" id="decreto" name="decreto">
                             <label for="fechaDecreto">Fecha decreto</label>
-                            <input type="date" class="form-control" id="fechaDecreto">
+                            <input type="date" class="form-control" id="fechaDecreto" name="fechaDecreto">
                         </div>
                         <button type="submit" class="btn btn-success">Registrar</button>
                     </form>
@@ -31,11 +32,11 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="respuesta_solicitud" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="confirmacionDeRegistro" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Solicitud</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Confirmación de registro</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -58,10 +59,10 @@
         $(document).ready(function(){
 
 
-$('#solicitud_reserva').on('submit',function(event){
+$('#formularioRegistroCar').on('submit',function(event){
 
 event.preventDefault();
-var action_url = "/solicitar";
+var action_url = "/gestion-car/post-nuevo-registro";
 
 
 
@@ -85,11 +86,11 @@ if(data.errors)
 if(data.success)
 {
  html = '<div class="alert alert-success">' + data.success + '</div>';
- $('#solicitud_reserva')[0].reset();
+ $('#formularioRegistroCar')[0].reset();
 
 }
 $('#respuesta').html(html);
-$("#respuesta_solicitud").modal("show");
+$("#confirmacionDeRegistro").modal("show");
 
 }
 });

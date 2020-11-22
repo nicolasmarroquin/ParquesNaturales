@@ -22,12 +22,19 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($car as $carRow)
                         <tr>
-                            <th scope="row">113345678</th>
-                            <td>Corpoamazonia</td>
-                            <td>Leticia,Amazonas</td>
-                            <td>Activo</td>
-                            <td>12334</td>
+                            <th scope="row">{{$carRow -> nit_CAR }}</th>
+                            <td>{{$carRow -> nombre_CAR }}</td>
+                            <td>{{$carRow -> ubicacion_CAR }}</td>
+                            <td>
+                                @if(($carRow -> estado_CAR)==1)
+                                activo
+                                @else
+                                inactivo
+                                @endif
+                            </td>
+                            <td>{{$carRow -> DECRETO_num_decreto }}</td>
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="First group">
                                     <button type="button" class="btn btn-primary">Editar</button>
@@ -35,7 +42,7 @@
                                 </div>
                             </td>
                         </tr>
-
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -50,7 +57,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Solicitud</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Realizado</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

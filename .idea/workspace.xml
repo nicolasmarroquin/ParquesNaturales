@@ -21,17 +21,18 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25d1e0dc-10c4-425d-8060-91657b9199da" name="Default Changelist" comment="Se modifica git ignore">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Decreto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85212a7e-b6d9-4939-afb2-7b55d89ed0a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85212a7e-b6d9-4939-afb2-7b55d89ed0a7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CAR.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CAR.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CARController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CARController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/formulario_registro_car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/formulario_registro_car.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/gestion-car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/gestion-car.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,11 +161,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kRhhVghUyEbtx1DemeOCCiw2mC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -204,7 +209,9 @@
       <workItem from="1605757074646" duration="7675000" />
       <workItem from="1605766716323" duration="1458000" />
       <workItem from="1605769779777" duration="1503000" />
-      <workItem from="1605832693326" duration="12265000" />
+      <workItem from="1605832693326" duration="12447000" />
+      <workItem from="1605916973771" duration="12546000" />
+      <workItem from="1606001202497" duration="326000" />
     </task>
     <servers />
   </component>
@@ -216,24 +223,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="243" key="#Composer" timestamp="1605669455907">
@@ -248,9 +246,10 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1641" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605765982590" />
-    <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605759734316">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605919017620">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605919017620" />
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605759734316" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1605766099421">
       <screen x="1366" y="0" width="1366" height="728" />
@@ -292,17 +291,21 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766583390" />
-    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1605771140057">
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1605853423042">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605771140057" />
-    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605771275206">
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605853423042" />
+    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605853467535">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605771275206" />
+    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605853467535" />
     <state x="1812" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605766861339">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1812" y="265" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766861339" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605926954424">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605926954424" />
   </component>
 </project>
