@@ -40,3 +40,5 @@ Route::post('RegistrarVisitante', 'VisitanteController@guardar')-> name('/Regist
 Route::get('/gestion-car/nuevo-registro', 'CARController@crearRegistro')->name('/gestion-car/nuevo-registro');
 
 Route::post('/gestion-car/post-nuevo-registro', 'CARController@crearCAR')->name('/gestion-car/post-nuevo-registro');
+
+Route::get('/aprobar-solicitud', 'SolicitudReservaController@listarSolicitud')->name('/aprobar-solicitud');

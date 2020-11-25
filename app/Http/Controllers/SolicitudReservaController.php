@@ -4,25 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ParqueNatural;
+use App\PersonaParqueNatural;
+use App\Persona;
 use App\ServicioHospedaje;
 use App\Solicitante;
 use App\SolicitudReserva;
 use App\Estado;
+use DB;
 use Auth;
 use Illuminate\Database\QueryException;
 
 class SolicitudReservaController extends Controller
 {
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+   
     /**
      * Muestra la página para solicitud de reservas
      *
@@ -37,6 +32,28 @@ class SolicitudReservaController extends Controller
 
 
         return view('solicitud_reserva',['parques_naturales' => $parques_naturales_reservables ]);
+    }
+    public function listarSolicitud()
+    {
+        
+        $matchThesePer = ['id_usuario' => Auth::user()->id]; 
+        $personas = Persona::where($matchThesePer)->get();
+        $matchThesePerPN = ['PERSONA_id_persona' => $personas[0]->id_persona]; 
+        $personasPN = PersonaParqueNatural::where($matchThesePerPN)->get();
+
+        
+
+        
+
+        $solicitudes=DB::table('solicitud_reserva')
+       ->join('solicitante', 'id_solicitante', '=', 'SOLICITANTE_id_solicitante')
+       ->join('estado', 'id_estado', '=', 'ESTADO_id_estado')
+        ->join('servicio_hospedaje', 'SERVICIO_id_servicio', '=', 'id_servicio')
+        ->where([['PARQUE_NATURAL_id_parque',$personasPN[0]->PARQUE_NATURAL_id_parque],['ESTADO_id_estado',[1,2]]])
+        
+        ->get();
+       // return($solicitudes);    
+        return view('aprobar_solicitud',['solicitudes' => $solicitudes ]);
     }
 
     /**
@@ -60,7 +77,7 @@ class SolicitudReservaController extends Controller
     public function store(Request $request)
     {
         $solicitante =  array(
-            'nombre solicitante'=> $request->nombres,
+            'nombre_solicitante'=> $request->nombres,
             'email_solicitante'=> $request->email,
             'fecha_nacimiento_solicitante'=>$request->fecha_nacimiento,
             'genero_solicitante'=>$request->genero,
