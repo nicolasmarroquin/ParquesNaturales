@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-13">
             <div class="card">
                 <div class="card-header">Estado de solicitud de reserva</div>
 
@@ -35,9 +35,9 @@
                             <td>{{$solicitud -> fin_reserva }}</td>
                             <td>
                                 @if(($solicitud -> adelanto_reserva)==1)
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1" checked="true">
+                            <input type="checkbox" class="form-check-input" name="checkbox_pago" id="{{$solicitud -> id_solicitud }}" checked="true">
                                 @else
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" class="form-check-input" name="checkbox_pago" id="{{$solicitud -> id_solicitud }}">
                                 @endif
                               
                             </td>
@@ -46,8 +46,8 @@
                             <td>{{$solicitud -> capacidad }}</td>
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                    <button type="button" class="btn btn-primary">Editar</button>
-                                    <button type="button" class="btn btn-danger" >Eliminar</button>
+                                    <button type="button" class="btn btn-primary">Aprobar</button>
+                                    <button type="button" class="btn btn-danger" >Rechazar</button>
                                 </div>
                             </td>
                         </tr>
@@ -64,9 +64,52 @@
 </div>
 
 
+<div id="confirmacion_pago" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Confirmación de pago</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <span id="adelanto_pago_confirmacion"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" name="ok_button" id="ok_button" class="btn btn-danger">OK</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 @endsection
 @push('scripts')
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js">
+</script>
+<script>
+
+$(document).ready(function() {
+    
+    let pago_adelanto;
+    let id_solicitud;
+    $("input[name='checkbox_pago']").change(function() {
+        pago_adelanto=$( this ).prop( "checked" );
+        id_solicitud=$( this ).prop( "id" );
+        let html;
+        if(pago_adelanto){
+            html = '<div class="alert alert-danger">' + '¿Desea marcar la solicitud con adelanto de pago?' + '</div>';
+            
+        }else{
+            html = '<div class="alert alert-danger">' + '¿Desea desmarcar la solicitud con adelanto de pago?' + '</div>';
+        }
+        $('#adelanto_pago_confirmacion').html(html);
+        $('#confirmacion_pago').modal('show');  
+    });
+    
+});
+
+</script>
 @endpush
