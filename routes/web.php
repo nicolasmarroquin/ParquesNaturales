@@ -42,3 +42,5 @@ Route::get('/gestion-car/nuevo-registro', 'CARController@crearRegistro')->name('
 Route::post('/gestion-car/post-nuevo-registro', 'CARController@crearCAR')->name('/gestion-car/post-nuevo-registro');
 
 Route::get('/aprobar-solicitud', 'SolicitudReservaController@listarSolicitud')->name('/aprobar-solicitud');
+
+Route::get('PagoSolicitud/{id_solicitud}/{adelanto}', 'SolicitudReservaController@actualizarPago')-> name('/PagoSolicitud/{id_solicitud}/{adelanto}');
