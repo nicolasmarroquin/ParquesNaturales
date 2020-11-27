@@ -52,7 +52,7 @@
                 </a>
                 @endcan
                 @can('autorizar reservas')
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/aprobar-solicitud') }}">
                     Aprobación de solicitudes
                 </a>
                 @endcan
