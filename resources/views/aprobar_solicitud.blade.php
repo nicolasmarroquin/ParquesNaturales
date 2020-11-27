@@ -100,7 +100,7 @@ $(document).ready(function() {
         id_solicitud=$( this ).prop( "id" );
         let html;
         if(pago_adelanto){
-            html = '<div class="alert alert-danger">' + '¿Desea marcar la solicitud con adelanto de pago?' + '</div>';
+            html = '<div class="alert alert-danger">' + '¿Desea marcar la solicitud con adelanto de pago?'+id_solicitud + '</div>';
             
         }else{
             html = '<div class="alert alert-danger">' + '¿Desea desmarcar la solicitud con adelanto de pago?' + '</div>';
@@ -108,6 +108,8 @@ $(document).ready(function() {
         $('#adelanto_pago_confirmacion').html(html);
         $('#confirmacion_pago').modal('show');  
     });
+
+    
     
 });
 
