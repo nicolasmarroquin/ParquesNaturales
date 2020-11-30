@@ -48,8 +48,10 @@
                                         <td>{{ $solicitud->capacidad }}</td>
                                         <td>
                                             <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                                <button type="button" class="btn btn-primary">Aprobar</button>
-                                                <button type="button" class="btn btn-danger">Rechazar</button>
+                                                <button type="button" class="btn btn-primary" name="button_aprobar"
+                                                    id="{{ $solicitud->id_solicitud }}">Aprobar</button>
+                                                <button type="button" class="btn btn-danger" name="button_rechazar"
+                                                    id="{{ $solicitud->id_solicitud }}">Rechazar</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -84,6 +86,24 @@
         </div>
     </div>
 
+    <div id="confirmacion_aprobar" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Confirmar aprobación</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="alert alert-success">
+                    <spam id="adelanto_confirmar"></spam>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" name="ok_buttoncp" id="ok_buttoncp" class="btn btn-danger ">OK</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 @endsection
@@ -112,36 +132,79 @@
                 $('#confirmacion_pago').modal('show');
             });
 
-            
-            $('#ok_button').click(function(){
-                
-                event.preventDefault();
 
-                var action_url = "/PagoSolicitud/"+id_solicitud+"/"+pago_adelanto;
+            $('#ok_button').click(function() {
+                event.preventDefault();
+                var action_url = "/PagoSolicitud/" + id_solicitud + "/" + pago_adelanto;
                 $.ajax({
                     url: action_url,
                     data: $(this).serialize(),
                     success: function(data) {
-                       var html = '';
+                        var html = '';
                         html = '<div class="alert alert-danger">';
-                                html += '<p>' + 'ok' + '</p>';
-                            html += '</div>';
-                        /*if (data.errors) {
-                            html = '<div class="alert alert-danger">';
-                            for (var count = 0; count < data.errors.length; count++) {
-                                html += '<p>' + data.errors[count] + '</p>';
-                            }
-                            html += '</div>';
-                        }
-                        if (data.success) {
-                            html = '<div class="alert alert-success">' + data.success +
-                                '</div>';
-                            $('#registro_visitante')[0].reset();
-                        }*/
+                        html += '<p>' + 'ok' + '</p>';
+                        html += '</div>';
                         $('#adelanto_pago_confirmacion').html(html);
                         $("#confirmacion_pago").modal("show");
+                        location.reload();
                     }
                 });
+            });
+
+            $("button[name='button_aprobar']").click(function() {
+                id_solicitud = $(this).prop("id");
+                event.preventDefault();
+                var checkbox_pago="input[name='checkbox_pago']";
+                var action_url = "/AprobarSolicitud/" + id_solicitud;
+
+                console.log($(checkbox_pago).prop("checked"));
+                if($(checkbox_pago).prop("checked")==true){
+                $.ajax({
+                    url: action_url,
+                    data: $(this).serialize(),
+                    success: function(data) {
+                        var html = '';
+                        html = '<div class="alert alert-danger">';
+                        html += '<p>' + 'Solicitud aprobada correctamente' + '</p>';
+                        html += '</div>';
+                        $('#adelanto_confirmar').html(html);
+                        $("#confirmacion_aprobar").modal("show");
+                    }
+                });
+                }
+                else{
+                        var html = '';
+                        html = '<div class="alert alert-danger">';
+                        html += '<p>' +'No puede aprobar una solicitud sin tener el adelanto pagado.' + '</p>';
+                        html += '</div>';
+                        $('#adelanto_confirmar').html(html);
+                        $("#confirmacion_aprobar").modal("show");
+                }
+
+            });
+
+           $("button[name='button_rechazar']").click(function() {
+                id_solicitud = $(this).prop("id");
+                event.preventDefault();
+                var checkbox_pago="input[name='checkbox_pago']";
+                var action_url = "/RechazarSolicitud/" + id_solicitud;
+
+                console.log($(checkbox_pago).prop("checked"));
+                $.ajax({
+                    url: action_url,
+                    data: $(this).serialize(),
+                    success: function(data) {
+                        var html = '';
+                        html = '<div class="alert alert-danger">';
+                        html += '<p>' + 'Solicitud rechazada correctamente.' + '</p>';
+                        html += '</div>';
+                        $('#adelanto_confirmar').html(html);
+                        $("#confirmacion_aprobar").modal("show");
+                    }
+                });
+            });
+            $('#ok_buttoncp').click(function() {
+                        location.reload();
             });
 
         });

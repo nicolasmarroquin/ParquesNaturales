@@ -77,6 +77,38 @@ class SolicitudReservaController extends Controller
         return $adelanto;
     }
 
+    /**
+     * Muestra la página con formulario para solicitud
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function AprobarSolicitud($id_solicitud)
+    {
+        $SolicitudReservas =  array(
+            'ESTADO_id_estado' => 5,
+        );
+        SolicitudReserva::where('id_solicitud', $id_solicitud)
+            ->update($SolicitudReservas);
+ 
+        //return view('formulario_solicitud_reserva',['servicios' => $servicios ]);
+        return $id_solicitud;
+    }
+
+    /**
+     * Muestra la página con formulario para solicitud
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function RechazarSolicitud($id_solicitud)
+    {
+        $SolicitudReservas =  array(
+            'ESTADO_id_estado' => 4,
+        );
+        SolicitudReserva::where('id_solicitud', $id_solicitud)
+            ->update($SolicitudReservas);
+        return $id_solicitud;
+    }
+
 
 
     /**
