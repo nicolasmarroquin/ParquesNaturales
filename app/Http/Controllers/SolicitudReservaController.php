@@ -158,12 +158,11 @@ class SolicitudReservaController extends Controller
             'inicio_reserva' => $request->inicio_reserva,
             'fin_reserva' => $request->fin_reserva,
             'ESTADO_id_estado' => 1
-
         );
 
         $solicitud = SolicitudReserva::create($solicitud);
 
-        return response()->json(['success' => 'Solicitud realizada con el ID: ' . $solicitud->id]);
+        return response()->json(['success' => 'Solicitud realizada con el ID: ' . $solicitud->id_solicitud]);
     }
 
     /**
