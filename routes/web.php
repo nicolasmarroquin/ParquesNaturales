@@ -47,13 +47,11 @@ Route::get('/gestion-car/formulario_editar_car', 'CARController@editarCAR')->nam
 
 Route::get('/aprobar-solicitud', 'SolicitudReservaController@listarSolicitud')->name('/aprobar-solicitud');
 
-<<<<<<< HEAD
 Route::get('PagoSolicitud/{id_solicitud}/{adelanto}', 'SolicitudReservaController@actualizarPago')-> name('/PagoSolicitud/{id_solicitud}/{adelanto}');
 
 Route::get('AprobarSolicitud/{id_solicitud}', 'SolicitudReservaController@AprobarSolicitud')-> name('/AprobarSolicitud/{id_solicitud}');
 
 Route::get('RechazarSolicitud/{id_solicitud}', 'SolicitudReservaController@RechazarSolicitud')-> name('/RechazarSolicitud/{id_solicitud}');
-=======
 Route::get('/gestion-parques', 'ParqueController@index')->name('/gestion-parques');
 
 Route::get('PagoSolicitud/{id_solicitud}/{adelanto}', 'SolicitudReservaController@actualizarPago')-> name('/PagoSolicitud/{id_solicitud}/{adelanto}');
@@ -63,4 +61,3 @@ Route::get('/gestion-parques/nuevo-registro', 'ParqueController@crearRegistro')-
 Route::post('/gestion-parques/post-nuevo-registro', 'ParqueController@crearParque')->name('/gestion-parques/post-nuevo-registro');
 
 Route::get('/gestion-parques/eliminar/{id_parque}','ParqueController@eliminar','/gestion-parques/eliminar/{id_parque}');
->>>>>>> 74655c93e818a06fea810b2167f241d8a15e2fd7
