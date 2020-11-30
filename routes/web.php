@@ -61,3 +61,7 @@ Route::get('/gestion-parques/nuevo-registro', 'ParqueController@crearRegistro')-
 Route::post('/gestion-parques/post-nuevo-registro', 'ParqueController@crearParque')->name('/gestion-parques/post-nuevo-registro');
 
 Route::get('/gestion-parques/eliminar/{id_parque}','ParqueController@eliminar','/gestion-parques/eliminar/{id_parque}');
+
+Route::get('/actividad-ilicita', 'ActividadIlicitaController@index')->name('actividad-ilicita');
+
+Route::post('/actividad-ilicita/registrar', 'ActividadIlicitaController@registrarActividadIlicita')->name('actividad-ilicita/registrar');

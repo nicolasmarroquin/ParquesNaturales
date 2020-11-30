@@ -56,6 +56,11 @@
                     Aprobación de solicitudes
                 </a>
                 @endcan
+                @can('registrar actividad')
+                <a class="navbar-brand" href="{{ url('/actividad-ilicita') }}">
+                    Registrar Actividad Ilícita
+                </a>
+                @endcan
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
