@@ -9,9 +9,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-   
+
     <!-- Scripts -->
-    
+
 
     <!--favicon-->
     <link rel="icon" type="image/png" href="{{asset('pillshare2.png')}}">
@@ -21,10 +21,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-   
-    
-   
-  
+
+
+
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/dt-1.10.20/r-2.2.3/datatables.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{config('app.name', 'Laravel')}}
                 </a>
                 @can('gestionar CARs')
                 <a class="navbar-brand" href="{{ url('/gestion-car') }}">
@@ -42,7 +42,7 @@
                 </a>
                 @endcan
                 @can('gestionar Parques')
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/gestion-parques') }}">
                     Gestión de Parques Naturales
                 </a>
                 @endcan
