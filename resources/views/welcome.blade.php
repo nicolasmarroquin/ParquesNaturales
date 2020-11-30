@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Gestion de Parques naturales</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -74,7 +74,7 @@
                         <a href="{{ route('login') }}">Ingreso</a>
                     @endauth
                 </div>
-                
+
             @endif
 
             <div class="content">
@@ -118,9 +118,9 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>        
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script>
-            
+
 
 $(document).ready(function(){
 
@@ -128,7 +128,7 @@ $(document).ready(function(){
         event.preventDefault();
         $('#respuesta').html('');
         $("#busqueda").modal("show");
-      
+
     });
 
     $('#buscar').click(function(){
@@ -164,22 +164,22 @@ if(data.success)
 
 }
 });
-      
+
   });
 
 
 });
 
-            
 
-          
 
-            
 
-                
-          
 
-          
+
+
+
+
+
+
 
 
         </script>

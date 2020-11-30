@@ -36,10 +36,9 @@
                             </td>
                             <td>{{$carRow -> DECRETO_num_decreto }}</td>
                             <td>
-                                <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                    <button type="button" class="btn btn-primary">Editar</button>
-                                    <button type="button" class="btn btn-danger" >Eliminar</button>
-                                </div>
+{{--                                <a href="/gestion-car/formulario_editar_car/{{$carRow -> nit_CAR}}" class="btn btn-primary btn-sm">Editar</a>--}}
+                                <a href="/gestion-car/formulario_editar_car/" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="/gestion-car/" class="btn btn-danger btn-sm">Eliminar</a>
                             </td>
                         </tr>
                         @endforeach

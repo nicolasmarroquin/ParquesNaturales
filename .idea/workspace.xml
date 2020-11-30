@@ -26,13 +26,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25d1e0dc-10c4-425d-8060-91657b9199da" name="Default Changelist" comment="Se modifica git ignore">
-      <change afterPath="$PROJECT_DIR$/app/Decreto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Especies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ParqueController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ValorIngreso.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/formulario_editar_car.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/formulario_registro_parque.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/gestion-parques.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/85212a7e-b6d9-4939-afb2-7b55d89ed0a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85212a7e-b6d9-4939-afb2-7b55d89ed0a7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2020_1_23_a__m___Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2020_1_23_a__m___Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/CAR.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CAR.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CARController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CARController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/formulario_registro_car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/formulario_registro_car.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ParqueNatural.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ParqueNatural.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/formulario_visitante.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/formulario_visitante.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/gestion-car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/gestion-car.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +183,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -186,8 +196,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\ParquesNaturales\resources" />
       <recent name="C:\laragon\www\ParquesNaturales\resources\views" />
       <recent name="C:\laragon\www\ParquesNaturales\resources\views\layouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\ParquesNaturales\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -211,7 +225,15 @@
       <workItem from="1605769779777" duration="1503000" />
       <workItem from="1605832693326" duration="12447000" />
       <workItem from="1605916973771" duration="12546000" />
-      <workItem from="1606001202497" duration="326000" />
+      <workItem from="1606001202497" duration="1751000" />
+      <workItem from="1606005216102" duration="14035000" />
+      <workItem from="1606174797946" duration="2494000" />
+      <workItem from="1606264884001" duration="4504000" />
+      <workItem from="1606350599636" duration="852000" />
+      <workItem from="1606351748272" duration="5848000" />
+      <workItem from="1606433911410" duration="7058000" />
+      <workItem from="1606581701622" duration="40845000" />
+      <workItem from="1606670828683" duration="17648000" />
     </task>
     <servers />
   </component>
@@ -223,7 +245,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -246,19 +280,23 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1641" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605765982590" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605919017620">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606713709907">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605919017620" />
-    <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605759734316" />
+    <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606713709907" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1605766099421">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766099421" />
-    <state x="1829" y="118" key="FileChooserDialogImpl" timestamp="1605766490148">
+    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1606362371182">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766490148" />
+    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606362371182" />
+    <state x="1829" y="118" key="FileChooserDialogImpl" timestamp="1606456734285">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606456734285" />
     <state x="1873" y="283" key="Github.CreateGistDialog" timestamp="1605766506484">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -291,14 +329,14 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605766583390" />
-    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1605853423042">
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606722215716">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605853423042" />
-    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605853467535">
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606722215716" />
+    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606722157666">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1605853467535" />
+    <state x="1866" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606722157666" />
     <state x="1812" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605766861339">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>

@@ -10,7 +10,7 @@
                         <form method="post" id="registro_visitante">
                             @csrf
                             <div class="form-group">
-                                <label for="inicio_reserva">Fecah de nacimiento</label>
+                                <label for="inicio_reserva">Fecha de nacimiento</label>
                                 <input type="date" class="form-control" id="Fecha_naciemiento"
                                     name="Fecha_naciemiento">
                             </div>

@@ -41,6 +41,18 @@ Route::get('/gestion-car/nuevo-registro', 'CARController@crearRegistro')->name('
 
 Route::post('/gestion-car/post-nuevo-registro', 'CARController@crearCAR')->name('/gestion-car/post-nuevo-registro');
 
+Route::get('/gestion-car/formulario_editar_car/{id_car}', 'CARController@editarCAR')->name('/gestion-car/formulario_editar_car/{id_car}');
+
+Route::get('/gestion-car/formulario_editar_car', 'CARController@editarCAR')->name('/gestion-car/formulario_editar_car');
+
 Route::get('/aprobar-solicitud', 'SolicitudReservaController@listarSolicitud')->name('/aprobar-solicitud');
 
+Route::get('/gestion-parques', 'ParqueController@index')->name('/gestion-parques');
+
 Route::get('PagoSolicitud/{id_solicitud}/{adelanto}', 'SolicitudReservaController@actualizarPago')-> name('/PagoSolicitud/{id_solicitud}/{adelanto}');
+
+Route::get('/gestion-parques/nuevo-registro', 'ParqueController@crearRegistro')->name('/gestion-parques/nuevo-registro');
+
+Route::post('/gestion-parques/post-nuevo-registro', 'ParqueController@crearParque')->name('/gestion-parques/post-nuevo-registro');
+
+Route::get('/gestion-parques/eliminar/{id_parque}','ParqueController@eliminar','/gestion-parques/eliminar/{id_parque}');

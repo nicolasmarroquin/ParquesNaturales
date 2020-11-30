@@ -40,6 +40,14 @@ class CARController extends Controller
         CAR::create($car);
 
         return response()->json(['success' => 'Registro de CAR con No. de decreto '.$request->decreto.' creado exitosamente.']);
-
     }
+
+    public function editarCAR()
+    {//$idCar
+       // $car = CAR::find($idCar);
+
+        return view('formulario_editar_car');
+    }
+
+
 }
